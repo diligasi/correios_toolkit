@@ -1,34 +1,35 @@
-lib = File.expand_path("lib", __dir__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "correios_toolkit/version"
+require 'correios_toolkit/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "correios_toolkit"
+  spec.name          = 'correios_toolkit'
   spec.version       = CorreiosToolkit::VERSION
-  spec.authors       = ["Diogo de Lima"]
-  spec.email         = ["diligasi@gmail.com"]
+  spec.authors       = ['Diogo de Lima']
+  spec.email         = ['diligasi@gmail.com']
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
-  spec.license       = "MIT"
+  spec.summary       = 'Integration gem with Correios do Brasil.'
+  spec.description   = <<-EOTEXT
+    The Correios do Brasil (brazilian post office service) makes available, free of charge, to
+    customers with or without a contract, a set of services accessible via Web services that
+    enable the integration of customer's systems with the technological environment of the
+    Correios.
+    Therefore, this gem aims to create an abstraction layer that facilitates the communication
+    and consumption of the services provided from ruby applications.
+  EOTEXT
+  spec.homepage      = 'https://rubygems.org/gems/correios_toolkit'
+  spec.license       = 'MIT'
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+  spec.metadata['homepage_uri']    = spec.homepage
+  spec.metadata['source_code_uri'] = 'https://github.com/diligasi/correios_toolkit'
+  spec.metadata['changelog_uri']   = 'https://github.com/diligasi/correios_toolkit/releases'
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
-
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  end
-  spec.bindir        = "exe"
+  spec.files         = Dir['{lib}/**/*.rb', 'bin/*', 'LICENSE', '*.md']
+  spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 
-  spec.add_development_dependency "bundler", "~> 2.0"
-  spec.add_development_dependency "rake", "~> 12.3.3"
-  spec.add_development_dependency "rspec", "~> 3.9"
+  spec.add_development_dependency 'bundler', '~> 2.0'
+  spec.add_development_dependency 'rake', '~> 12.3.3'
+  spec.add_development_dependency 'rspec', '~> 3.9'
 end
