@@ -1,6 +1,9 @@
 require 'rest-client'
 require 'active_support/core_ext'
 
+##
+# This class concentrate the basic information to retrieve data from the web
+# service. This class is intended to be inherited by all other classes.
 module CorreiosToolkit
   class Base
     class GatewayError < StandardError; end

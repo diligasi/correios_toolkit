@@ -8,12 +8,12 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Diogo de Lima']
   spec.email         = ['diligasi@gmail.com']
 
-  spec.summary       = 'Integration gem with Correios do Brasil.'
+  spec.summary       = 'Ruby library for an easy integration with the Correios (brazilian post office service) SOAP web service.'
   spec.description   = <<-EOTEXT
     The Correios do Brasil (brazilian post office service) makes available, free of charge, to
-    customers with or without a contract, a set of services accessible via Web services that
-    enable the integration of customer's systems with the technological environment of the
-    Correios.
+    customers with or without a contract, a set of services accessible via a SOAP Web service
+    that enable the integration from customer's systems with the Correios' technological
+    environment.
     Therefore, this gem aims to create an abstraction layer that facilitates the communication
     and consumption of the services provided from ruby applications.
   EOTEXT
