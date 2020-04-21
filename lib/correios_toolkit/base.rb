@@ -3,6 +3,8 @@ require 'active_support/core_ext'
 
 module CorreiosToolkit
   class Base
+    class GatewayError < StandardError; end
+    class LengthError < StandardError; end
 
     SOAP_URL = 'https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl'.freeze
     CORREIOS_DEFAULT_ENCODE = 'ISO-8859-1'.freeze
