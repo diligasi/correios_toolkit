@@ -12,9 +12,9 @@ aims to create an abstraction layer that facilitates the communication and consu
 provided from ruby applications.
 
 ## Requirements
-Ruby 2.0 and newer are supported. Alternative interpreters compatible with 2.0+ should work as well.
+Ruby 2.3 and newer are supported. Alternative interpreters compatible with 2.3+ should work as well.
 
-Earlier Ruby versions such as 1.8.7, 1.9.2, and 1.9.3 were not tested, don't have any official support,
+Earlier Ruby versions such as 1.8.7, 1.9.2, 1.9.3 and 2.0 were not tested, don't have any official support,
 and will not receive features and/or security updates.
 
 The _correios_toolkit_ gem depends on these other gems for usage at runtime:
@@ -49,9 +49,9 @@ CorreiosToolkit.consulta_cep('01310000')
 ## Current available services
 On the following list are the services already available on this gem:
 
-* _ConsultaCEP_
-  * Get address' information by zip code
-* Others are coming soon...
+* **ConsultaCEP**
+  * _Get address' information by zip code_
+* **Others are coming soon...**
 
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/diligasi/correios_toolkit. This
